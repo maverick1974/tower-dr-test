@@ -1,9 +1,10 @@
 ---
 
-- name: yum
+- name: debug hosts
+  gather_facts: false
   hosts: all
-  become: true
   tasks:
-    - name: install vim
-      package: vim
-      state: present
+  
+    - name: Display the config
+      debug:
+        msg: "The hostname is {{ ansible_net_hostname }} and the OS is {{ ansible_net_version }}"
