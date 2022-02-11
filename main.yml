@@ -8,3 +8,11 @@
     - name: Display the config
       debug:
         msg: "The nodename is {{ ansible_nodename }} ."
+        
+    - name: Package installation
+      yum:
+      name:
+        - vim
+        - wget
+      state: latest
+        
