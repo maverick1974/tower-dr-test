@@ -11,8 +11,8 @@
         
     - name: Package installation
       yum:
-      name:
-        - vim
-        - wget
-      state: latest
+        name:
+          - vim
+          - wget
+        state: latest
         
